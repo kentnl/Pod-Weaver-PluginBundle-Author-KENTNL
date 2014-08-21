@@ -507,22 +507,7 @@
                      },
                      {
                         "class" : "Pod::Weaver::Section::Collect",
-                        "name" : "@A:KNL/@A:KNL:Collectors/Collect.attr",
-                        "version" : "4.006"
-                     },
-                     {
-                        "class" : "Pod::Weaver::Section::Collect",
                         "name" : "@A:KNL/@A:KNL:Collectors/Collect.method",
-                        "version" : "4.006"
-                     },
-                     {
-                        "class" : "Pod::Weaver::Section::Collect",
-                        "name" : "@A:KNL/@A:KNL:Collectors/Collect.pattr",
-                        "version" : "4.006"
-                     },
-                     {
-                        "class" : "Pod::Weaver::Section::Collect",
-                        "name" : "@A:KNL/@A:KNL:Collectors/Collect.pmethod",
                         "version" : "4.006"
                      },
                      {
