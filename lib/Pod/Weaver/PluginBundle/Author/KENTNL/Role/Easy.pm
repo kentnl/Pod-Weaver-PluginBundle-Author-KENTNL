@@ -7,7 +7,7 @@ package Pod::Weaver::PluginBundle::Author::KENTNL::Role::Easy;
 
 our $VERSION = '0.001000';
 
-# ABSTRACT: Moo based instance based sugar syntax for mutable config declaration
+# ABSTRACT: Moo based instance based sugar syntax for mutable configuration declaration
 
 our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
 
@@ -105,7 +105,7 @@ __END__
 
 =head1 NAME
 
-Pod::Weaver::PluginBundle::Author::KENTNL::Role::Easy - Moo based instance based sugar syntax for mutable config declaration
+Pod::Weaver::PluginBundle::Author::KENTNL::Role::Easy - Moo based instance based sugar syntax for mutable configuration declaration
 
 =head1 VERSION
 
