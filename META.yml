@@ -36,7 +36,6 @@ provides:
     file: lib/Pod/Weaver/PluginBundle/Author/KENTNL/Role/Easy.pm
     version: '0.001000'
 requires:
-  Data::Dump: '0'
   Module::Runtime: '0'
   Moo: '0'
   Moo::Role: '0'
@@ -51,7 +50,6 @@ version: '0.001000'
 x_BuiltWith:
   modules:
     CPAN::Meta: '2.142060'
-    Data::Dump: '1.22'
     Dist::Zilla::Plugin::Author::KENTNL::RecommendFixes: '0.002003'
     Dist::Zilla::Plugin::Authority: '1.006'
     Dist::Zilla::Plugin::AutoPrereqs: '5.020'
@@ -352,7 +350,19 @@ x_Dist_Zilla:
               version: '4.006'
             -
               class: Pod::Weaver::Section::Collect
+              name: '@A:KNL/@A:KNL:Collectors/Collect.attr'
+              version: '4.006'
+            -
+              class: Pod::Weaver::Section::Collect
               name: '@A:KNL/@A:KNL:Collectors/Collect.method'
+              version: '4.006'
+            -
+              class: Pod::Weaver::Section::Collect
+              name: '@A:KNL/@A:KNL:Collectors/Collect.pattr'
+              version: '4.006'
+            -
+              class: Pod::Weaver::Section::Collect
+              name: '@A:KNL/@A:KNL:Collectors/Collect.pmethod'
               version: '4.006'
             -
               class: Pod::Weaver::Section::Region

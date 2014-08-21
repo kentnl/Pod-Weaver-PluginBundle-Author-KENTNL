@@ -5,6 +5,8 @@ use utf8;
 
 package Pod::Weaver::PluginBundle::Author::KENTNL::Prelude;
 
+our $VERSION = '0.001000';
+
 # ABSTRACT: Introductory POD Segments
 
 our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
@@ -43,6 +45,21 @@ Pod::Weaver::PluginBundle::Author::KENTNL::Prelude - Introductory POD Segments
 =head1 VERSION
 
 version 0.001000
+
+=head1 SYNOPSIS
+
+  [@Author::KENTNL::Prelude]
+
+is pretty much
+
+  [Name]
+  [Version]
+  [Region / pre_prelude]
+  [Generic / QUICK REFERENCE]
+  [Generic / SYNOPSIS]
+  [Generic / DESCRIPTION]
+  [Generic / OVERVIEW]
+  [Region / post_prelude]
 
 =head1 AUTHOR
 

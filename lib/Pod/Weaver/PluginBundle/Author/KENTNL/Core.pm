@@ -5,6 +5,8 @@ use utf8;
 
 package Pod::Weaver::PluginBundle::Author::KENTNL::Core;
 
+our $VERSION = '0.001000';
+
 # ABSTRACT: Core configuration for Pod::Weaver
 
 our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
@@ -37,6 +39,15 @@ Pod::Weaver::PluginBundle::Author::KENTNL::Core - Core configuration for Pod::We
 =head1 VERSION
 
 version 0.001000
+
+=head1 SYNOPSIS
+
+  [@Author::KENTNL::Core]
+
+This is presently basically the same as
+
+  [@CorePrep]
+  [-SingleEncoding]
 
 =head1 AUTHOR
 

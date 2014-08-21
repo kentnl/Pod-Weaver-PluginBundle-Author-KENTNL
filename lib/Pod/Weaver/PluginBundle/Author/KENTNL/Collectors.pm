@@ -5,6 +5,8 @@ use utf8;
 
 package Pod::Weaver::PluginBundle::Author::KENTNL::Collectors;
 
+our $VERSION = '0.001000';
+
 # ABSTRACT: Sub/Attribute/Whatever but shorter and with defaults
 
 our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
@@ -25,6 +27,38 @@ my $command_aliases = {
   'pmethod' => "PRIVATE METHODS",
   'pattr'   => "PRIVATE ATTRIBUTES",
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 lsub commands => sub {
   return [qw( attr method pattr pmethod )];
@@ -78,6 +112,67 @@ Pod::Weaver::PluginBundle::Author::KENTNL::Collectors - Sub/Attribute/Whatever b
 =head1 VERSION
 
 version 0.001000
+
+=head1 QUICK REFERENCE
+
+  [@Author::KENTNL::Collectors]
+  ; command[].default = [ attr method pattr pmethod ]
+  ; command[].entry_type[0] = KNOWNCOMMANDNAME
+  ; command[].entry_type[1] = COMMANDNAME = DESCRIPTION
+  ;        KNOWNCOMMANDNAME.enums =     
+  ;             = method        ; METHODS
+  ;             = attr          ; ATTRIBUTES
+  ;             = cattr         ; ATTRIBUTES / CONSTRUCTOR ARGUMENTS
+  ;             = pmethod       ; PRIVATE METHODS
+  ;             = pattr         ; PRIVATE ATTRIBUTES
+
+=head1 SYNOPSIS
+
+  [@Author::KENTNL::Collectors]
+
+This is basically the same as
+
+  [Region / pre_commands]
+
+  ; This stuff repeated a bunch of times
+  [Collect / ... ]
+  ... 
+
+  [Region / post_commands]
+
+But "This stuff repeated here" is a bit complicated and dynamic.
+
+=head1 ATTRIBUTES
+
+=head2 C<commands>
+
+A C<mvp_multivalue_args> parameter.
+
+  command = method
+  command = attr
+  command = unknowncommand = HEADING IS THIS
+
+Default value:
+
+  [qw( attr method pattr pmethod )]
+
+=head3 Interpretation
+
+=over 4
+
+=item * C<attr> : ATTRIBUTES command = C<attr>
+
+=item * C<method> : METHODS command = C<method>
+
+=item * C<cattr> : ATTRIBUTES / CONSTRUCTOR ARGUMENTS command = C<cattr>
+
+=item * C<pmethod> : PRIVATE METHODS command = C<pmethod>
+
+=item * C<pattr> : PRIVATE ATTRIBUTES command = C<pattr>
+
+=item * C<([^\s]+) = (.+)> : C<$2> command = C<$1>
+
+=back
 
 =head1 AUTHOR
 

@@ -5,6 +5,8 @@ use utf8;
 
 package Pod::Weaver::PluginBundle::Author::KENTNL::Postlude;
 
+our $VERSION = '0.001000';
+
 # ABSTRACT: End of document stuff
 
 our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
@@ -42,6 +44,19 @@ Pod::Weaver::PluginBundle::Author::KENTNL::Postlude - End of document stuff
 =head1 VERSION
 
 version 0.001000
+
+=head1 SYNOPSIS
+
+  [@Author::KENTNL::Postlude]
+
+Is pretty much
+
+  [Region / pre_postlude]
+  [Leftovers]
+  [Authors]
+  [Contributors]
+  [Legal]
+  [Region / post_postlude]
 
 =head1 AUTHOR
 

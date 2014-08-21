@@ -5,25 +5,24 @@ use utf8;
 
 package Pod::Weaver::PluginBundle::Author::KENTNL::Role::Easy;
 
+our $VERSION = '0.001000';
+
 # ABSTRACT: Moo based instance based sugar syntax for mutable config declaration
 
 our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
 
 use Moo::Role qw( has required );
-use Pod::Weaver::Config::Assembler;
 use Try::Tiny qw( try catch );
 use Module::Runtime qw( require_module );
-sub _exp { Pod::Weaver::Config::Assembler->expand_package( $_[0] ) }
-has '_state' => ( is => 'ro' =>, lazy => 1, default => sub { [] } );
+use Pod::Weaver::Config::Assembler;
+
+has '_state' => ( init_arg => undef, is => 'ro' =>, lazy => 1, default => sub { [] } );
 
 requires 'bundle_prefix';
 requires 'instance_config';
 
 sub _prefixify {
   my ( $self, $oldname, $pluginname ) = @_;
-  if ( 'Pod::Weaver::Section::Contributors' eq $pluginname ) {
-
-  }
   return $self->bundle_prefix . '/' . $oldname;
 }
 
@@ -46,6 +45,7 @@ sub add_entry {
   $self->_push_state_prefixed( $name, $plugin, $config );
   return;
 }
+
 sub add_named_entry {
   my ( $self, $alias, $plugin_name, $config ) = @_;
   $config = {} unless defined $config;
@@ -69,19 +69,20 @@ sub inhale_bundle {
   return;
 }
 
-use Data::Dump qw(pp);
 sub mvp_bundle_config {
-  my ($class, $arg ) = @_;
+  my ( $class, $arg ) = @_;
   my @args;
   if ( $arg and 'HASH' eq ref $arg ) {
-    push @args, ( 'name' => $arg->{name} ) if exists $arg->{name};
+    push @args, ( 'name'    => $arg->{name} )    if exists $arg->{name};
     push @args, ( 'package' => $arg->{package} ) if exists $arg->{name};
     if ( exists $arg->{payload} ) {
       if ( 'HASH' eq ref $arg->{payload} ) {
         push @args, %{ $arg->{payload} };
-      } elsif ( 'ARRAY' eq ref $arg->{payload} ) {
+      }
+      elsif ( 'ARRAY' eq ref $arg->{payload} ) {
         push @args, @{ $arg->{payload} };
-      } else {
+      }
+      else {
         warn "Good luck with that payload buddy";
       }
     }
@@ -108,6 +109,53 @@ Pod::Weaver::PluginBundle::Author::KENTNL::Role::Easy - Moo based instance based
 =head1 VERSION
 
 version 0.001000
+
+=head1 QUICK REFERENCE
+
+  [>] bundle_prefix()                                         # [>] String
+  [>] instance_config()                                       # [>] mutator
+  ->add_entry( $plugin_name, $confighash )                    # mutator
+  ->add_named_entry( $name, $plugin_name, $confighash )       # mutator
+  ->inhale_bundle( $name, $arg )                              # mutator
+
+  ->mvp_bundle_config( $arg )                                 # List
+
+  ->_push_state_prefixed( $name, $plugin_name, $confighash )  # mutator
+  ->_push_state( $name, $plugin_name, $confighash )           # mutator
+  ->_prefixify( $name, $plugin_name )                         # String
+  ->_state()                                                  # ArrayRef
+
+
+  -~- MVP Magic -~-
+  [>?] mvp_multivalue_args                                    # [>] List[Str]
+  [>?] mvp_aliases                                            # [>] HashRef
+  [>?] mvp_bundle_config                                      # [>] List
+
+=head1 SYNOPSIS
+
+  package Foo;
+  use Moo qw( with );
+  with 'Pod::Weaver::PluginBundle::Author::KENTNL::Role::Easy'; # this is the hardest part ;)
+
+  sub bundle_prefix { 'some_identifier_@foo_is_good' }
+
+  has 'ox_bollocks' => ( is => ro => ..., default => sub { 1 } );
+  has 'an_mvp_thinger' => ( is => ro => ..., default => sub { [] } );
+
+  sub mvp_multivalue_args { 'an_mvp_thinger' };
+
+  sub instance_config {
+    my ( $self ) = @_;
+    $self->add_entry( $pluginname, $config );
+    if ( $self->ox_bollocks ) {
+      $self->add_named_entry( $alias, $pluginname, $config );
+    }
+    for my $thing ( @{ $self->an_mvp_thinger } ) {
+      ... # more things
+    }
+    $self->inhale_bundle( '@bundle', $maybeconfig );
+  }
+  1;
 
 =head1 AUTHOR
 

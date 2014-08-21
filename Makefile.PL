@@ -20,7 +20,6 @@ my %WriteMakefileArgs = (
   "LICENSE" => "perl",
   "NAME" => "Pod::Weaver::PluginBundle::Author::KENTNL",
   "PREREQ_PM" => {
-    "Data::Dump" => 0,
     "Module::Runtime" => 0,
     "Moo" => 0,
     "Moo::Role" => 0,
@@ -45,7 +44,6 @@ my %WriteMakefileArgs = (
 
 
 my %FallbackPrereqs = (
-  "Data::Dump" => 0,
   "ExtUtils::MakeMaker" => 0,
   "File::Spec" => 0,
   "Module::Runtime" => 0,

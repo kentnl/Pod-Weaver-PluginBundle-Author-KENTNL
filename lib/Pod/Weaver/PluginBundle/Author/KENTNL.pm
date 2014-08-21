@@ -56,6 +56,59 @@ Pod::Weaver::PluginBundle::Author::KENTNL - KENTNL's amazing Pod::Weaver Plugin 
 
 version 0.001000
 
+=head1 QUICK REFERENCE
+
+  [@Author::KENTNL]
+
+  -~- Inherited from @Author::KENTNL::Collectors -~-
+  ; command[].default = [ attr method pattr pmethod ]
+  ; command[].entry_type[0] = KNOWNCOMMANDNAME
+  ; command[].entry_type[1] = COMMANDNAME = DESCRIPTION
+  ;        KNOWNCOMMANDNAME.enums =     
+  ;             = method        ; METHODS
+  ;             = attr          ; ATTRIBUTES
+  ;             = cattr         ; ATTRIBUTES / CONSTRUCTOR ARGUMENTS
+  ;             = pmethod       ; PRIVATE METHODS
+  ;             = pattr         ; PRIVATE ATTRIBUTES
+
+=head1 SYNOPSIS
+
+  [@Author::KENTNL]
+
+This is basically the same as
+
+  [@Author::KENTNL::Core]
+
+  [@Author::KENTNL::Prelude]
+
+  [@Author::KENTNL::Collectors]
+
+  [@Author::KENTNL::Postlude]
+
+=over 4
+
+=item * C<[@Author::KENTNL::Core]> : L<<
+C<Pod::Weaver::PluginBundle::Author::KENTNL::Core>
+|Pod::Weaver::PluginBundle::Author::KENTNL::Core
+>>
+
+=item * C<[@Author::KENTNL::Prelude]> : L<<
+C<Pod::Weaver::PluginBundle::Author::KENTNL::Prelude>
+|Pod::Weaver::PluginBundle::Author::KENTNL::Prelude
+>>
+
+=item * C<[@Author::KENTNL::Collectors]> : L<<
+C<Pod::Weaver::PluginBundle::Author::KENTNL::Collectors>
+|Pod::Weaver::PluginBundle::Author::KENTNL::Collectors
+>>
+
+=item * C<[@Author::KENTNL::Postlude]> : L<<
+C<Pod::Weaver::PluginBundle::Author::KENTNL::Postlude>
+|Pod::Weaver::PluginBundle::Author::KENTNL::Postlude
+>>
+
+=back
+
 =head1 AUTHOR
 
 Kent Fredric <kentfredric@gmail.com>
