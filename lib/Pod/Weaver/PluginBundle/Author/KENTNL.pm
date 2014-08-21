@@ -14,9 +14,9 @@ our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
 use Moo qw( has with );
 with 'Pod::Weaver::PluginBundle::Author::KENTNL::Role::Easy';
 
-sub bundle_prefix       { '@A:KNL' }
-sub mvp_aliases         { { command => qw[commands] } }
-sub mvp_multivalue_args { qw( commands ) }
+sub bundle_prefix       { return '@A:KNL' }
+sub mvp_aliases         { return { command => qw[commands] } }
+sub mvp_multivalue_args { return qw( commands ) }
 
 has 'commands' => (
   is        => ro  =>,
