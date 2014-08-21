@@ -33,7 +33,7 @@ sub instance_config {
   if ( $self->has_commands ) {
     push @config, { payload => { 'commands' => $self->commands }};
   }
-  $self->inhale_bundle('@Author::KENTNL::Commands',@config);
+  $self->inhale_bundle('@Author::KENTNL::Collectors',@config);
   $self->inhale_bundle('@Author::KENTNL::Postlude');
   return;
 }

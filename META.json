@@ -502,6 +502,36 @@
                      },
                      {
                         "class" : "Pod::Weaver::Section::Region",
+                        "name" : "@A:KNL/@A:KNL:Collectors/Region.pre_commands",
+                        "version" : "4.006"
+                     },
+                     {
+                        "class" : "Pod::Weaver::Section::Collect",
+                        "name" : "@A:KNL/@A:KNL:Collectors/Collect.attr",
+                        "version" : "4.006"
+                     },
+                     {
+                        "class" : "Pod::Weaver::Section::Collect",
+                        "name" : "@A:KNL/@A:KNL:Collectors/Collect.method",
+                        "version" : "4.006"
+                     },
+                     {
+                        "class" : "Pod::Weaver::Section::Collect",
+                        "name" : "@A:KNL/@A:KNL:Collectors/Collect.pattr",
+                        "version" : "4.006"
+                     },
+                     {
+                        "class" : "Pod::Weaver::Section::Collect",
+                        "name" : "@A:KNL/@A:KNL:Collectors/Collect.pmethod",
+                        "version" : "4.006"
+                     },
+                     {
+                        "class" : "Pod::Weaver::Section::Region",
+                        "name" : "@A:KNL/@A:KNL:Collectors/Region.post_commands",
+                        "version" : "4.006"
+                     },
+                     {
+                        "class" : "Pod::Weaver::Section::Region",
                         "name" : "@A:KNL/@A:KNL:Postlude/Region.pre_postlude",
                         "version" : "4.006"
                      },
