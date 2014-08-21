@@ -282,27 +282,31 @@ x_Dist_Zilla:
               version: '4.006'
             -
               class: Pod::Weaver::Section::Name
-              name: Name
+              name: '@A:KNL:Prefix/Name'
               version: '4.006'
             -
               class: Pod::Weaver::Section::Version
-              name: Version
+              name: '@A:KNL:Prefix/Version'
+              version: '4.006'
+            -
+              class: Pod::Weaver::Section::Generic
+              name: '@A:KNL:Prefix/QUICKREF'
+              version: '4.006'
+            -
+              class: Pod::Weaver::Section::Generic
+              name: '@A:KNL:Prefix/SYNOPSIS'
+              version: '4.006'
+            -
+              class: Pod::Weaver::Section::Generic
+              name: '@A:KNL:Prefix/DESCRIPTION'
+              version: '4.006'
+            -
+              class: Pod::Weaver::Section::Generic
+              name: '@A:KNL:Prefix/OVERVIEW'
               version: '4.006'
             -
               class: Pod::Weaver::Section::Region
-              name: prelude
-              version: '4.006'
-            -
-              class: Pod::Weaver::Section::Generic
-              name: SYNOPSIS
-              version: '4.006'
-            -
-              class: Pod::Weaver::Section::Generic
-              name: DESCRIPTION
-              version: '4.006'
-            -
-              class: Pod::Weaver::Section::Generic
-              name: OVERVIEW
+              name: '@A:KNL:Prefix/Region'
               version: '4.006'
             -
               class: Pod::Weaver::Section::Collect
