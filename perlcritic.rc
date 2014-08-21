@@ -408,8 +408,7 @@ base_max = 130
 
 [ValuesAndExpressions::RequireConstantVersion]
 
-[ValuesAndExpressions::RequireInterpolationOfMetachars]
-rcs_keywords = Author CorePrep A:
+[-ValuesAndExpressions::RequireInterpolationOfMetachars]
 
 [ValuesAndExpressions::RequireNumberSeparators]
 
