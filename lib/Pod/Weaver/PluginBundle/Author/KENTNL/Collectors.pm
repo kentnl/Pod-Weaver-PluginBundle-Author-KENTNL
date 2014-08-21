@@ -25,11 +25,12 @@ sub mvp_multivalue_args { return qw( commands ) }
 sub bundle_prefix       { return '@A:KNL:Collectors' }
 
 my $command_aliases = {
-  'method'  => 'METHODS',
-  'attr'    => 'ATTRIBUTES',
-  'cattr'   => 'ATTRIBUTES / CONSTRUCTOR ARGUMENTS',
-  'pmethod' => 'PRIVATE METHODS',
-  'pattr'   => 'PRIVATE ATTRIBUTES',
+  'required' => 'REQUIRED METHODS',
+  'method'   => 'METHODS',
+  'attr'     => 'ATTRIBUTES',
+  'cattr'    => 'ATTRIBUTES / CONSTRUCTOR ARGUMENTS',
+  'pmethod'  => 'PRIVATE METHODS',
+  'pattr'    => 'PRIVATE ATTRIBUTES',
 };
 
 
@@ -64,8 +65,10 @@ my $command_aliases = {
 
 
 
+
+
 lsub commands => sub {
-  return [qw( attr method pattr pmethod )];
+  return [qw( required attr method pattr pmethod )];
 };
 
 
@@ -114,10 +117,11 @@ version 0.001000
 =head1 QUICK REFERENCE
 
   [@Author::KENTNL::Collectors]
-  ; command[].default = [ attr method pattr pmethod ]
+  ; command[].default = [ required attr method pattr pmethod ]
   ; command[].entry_type[0] = KNOWNCOMMANDNAME
   ; command[].entry_type[1] = COMMANDNAME = DESCRIPTION
   ;        KNOWNCOMMANDNAME.enums =
+  ;             = required      ; REQUIRED METHODS
   ;             = method        ; METHODS
   ;             = attr          ; ATTRIBUTES
   ;             = cattr         ; ATTRIBUTES / CONSTRUCTOR ARGUMENTS
@@ -152,11 +156,13 @@ A C<mvp_multivalue_args> parameter.
 
 Default value:
 
-  [qw( attr method pattr pmethod )]
+  [qw( required attr method pattr pmethod )]
 
 =head3 Interpretation
 
 =over 4
+
+=item * C<required> : REQUIRED METHODS command = C<required>
 
 =item * C<attr> : ATTRIBUTES command = C<attr>
 

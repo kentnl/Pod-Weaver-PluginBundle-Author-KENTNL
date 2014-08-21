@@ -19,19 +19,62 @@ use Pod::Weaver::Config::Assembler;
 
 has '_state' => ( init_arg => undef, is => 'ro' =>, lazy => 1, default => sub { [] } );
 
+
+
+
+
+
+
 requires 'bundle_prefix';
+
+
+
+
+
+
+
 requires 'instance_config';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 sub _prefixify {
   my ( $self, $oldname, ) = @_;    # called as ->( name, $pluginame ) just in case
   return $self->bundle_prefix . q[/] . $oldname;
 }
 
+
+
+
+
+
+
+
+
 sub _push_state {
   my ( $self, $name, $plugin, $config ) = @_;
   push @{ $self->_state }, [ $name, $plugin, $config ];
   return;
 }
+
+
+
+
+
+
+
+
 
 sub _push_state_prefixed {
   my ( $self, $name, $plugin, $config ) = @_;
@@ -105,6 +148,20 @@ sub add_named_entry {
   return;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 sub inhale_bundle {
   my ( $self, $name, @args ) = @_;
   my $plugin = Pod::Weaver::Config::Assembler->expand_package($name);
@@ -119,6 +176,10 @@ sub inhale_bundle {
   };
   return;
 }
+
+
+
+
 
 sub mvp_bundle_config {
   my ( $class, $arg ) = @_;
@@ -208,6 +269,16 @@ version 0.001000
   }
   1;
 
+=head1 REQUIRED METHODS
+
+=head2 C<bundle_prefix>
+
+Must return a string to prefix on B<ALL> entries.
+
+=head2 C<instance_config>
+
+Will be called for you to mutate state prior to returning the generated state.
+
 =head1 METHODS
 
 =head2 C<add_entry>
@@ -254,6 +325,46 @@ So. Use C<$config> ;)
     #   package => "Pod::Weaver::Section::Generic",
     #   payload => { header => 'SYNOPSIS' }
     # }
+
+=head2 C<inhale_bundle>
+
+Include another bundle prefixed as a component of your own.
+
+  ->inhale_bundle('@foobundle'); # Beginners mode
+  ->inhale_bundle('@foobundle', $confighash ); # EXPERT MODE
+
+Also, be aware that any bundle that has not been designed to be prefix resilient ( see L</add_named_entry> )
+will be likely broken if it relies on the "name" element to be meaningful.
+
+You can circumvent this if you wear your expert hat and overload L</_prefixify> and/or do it all yourself with  L</_push_state>
+
+=head1 PRIVATE METHODS
+
+=head2 C<_prefixify>
+
+Expands simple aliases into prefixed ones
+
+  ->_prefixify( $oldname, $plugin_package )  >> String
+
+Default implementation is simply
+
+  ->bundle_prefix . q[/] . $oldname
+
+And C<$plugin_package> is passed for overloading convenience if you ever want to do something magical.
+
+=head2 C<_push_state>
+
+Appends a configuration line to the internal array
+
+  ->_push_state( $raw_name, $plugin_package, $config_hash )
+
+=head2 C<_push_state_prefixed>
+
+Appends a configuration line to the internal array with C<$unprefixed_name> prefixed
+
+  ->_push_state_prefixed( $unprefixed_name, $plugin_package, $config_hash )
+
+=for Pod::Coverage mvp_bundle_config
 
 =head1 AUTHOR
 
