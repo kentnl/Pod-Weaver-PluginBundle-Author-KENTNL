@@ -9,6 +9,7 @@ META.yml
 Makefile.PL
 README
 dist.ini
+dist.ini.meta
 lib/Pod/Weaver/PluginBundle/Author/KENTNL.pm
 lib/Pod/Weaver/PluginBundle/Author/KENTNL/Collectors.pm
 lib/Pod/Weaver/PluginBundle/Author/KENTNL/Core.pm
