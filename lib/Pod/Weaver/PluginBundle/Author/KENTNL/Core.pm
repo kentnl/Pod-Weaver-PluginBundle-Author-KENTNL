@@ -14,6 +14,10 @@ our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
 use Moo qw( with );
 with 'Pod::Weaver::PluginBundle::Author::KENTNL::Role::Easy';
 
+
+
+
+
 sub bundle_prefix { return '@A:KNL:Core' }
 
 sub instance_config {
@@ -49,6 +53,8 @@ This is presently basically the same as
 
   [@CorePrep]
   [-SingleEncoding]
+
+=for Pod::Coverage bundle_prefix instance_config
 
 =head1 AUTHOR
 
