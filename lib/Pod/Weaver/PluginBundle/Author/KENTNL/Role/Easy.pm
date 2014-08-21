@@ -11,7 +11,8 @@ our $VERSION = '0.001000';
 
 our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
 
-use Moo::Role qw( has required );
+use Carp qw( carp );
+use Moo::Role qw( has requires );
 use Try::Tiny qw( try catch );
 use Module::Runtime qw( require_module );
 use Pod::Weaver::Config::Assembler;
@@ -22,8 +23,8 @@ requires 'bundle_prefix';
 requires 'instance_config';
 
 sub _prefixify {
-  my ( $self, $oldname, $pluginname ) = @_;
-  return $self->bundle_prefix . '/' . $oldname;
+  my ( $self, $oldname, ) = @_;  # called as ->( name, $pluginame ) just in case
+  return $self->bundle_prefix . q[/] . $oldname;
 }
 
 sub _push_state {
@@ -64,7 +65,7 @@ sub inhale_bundle {
     }
   }
   catch {
-    warn "Could not inhale $name: $_";
+    carp "Could not inhale $name: $_";
   };
   return;
 }
@@ -83,7 +84,7 @@ sub mvp_bundle_config {
         push @args, @{ $arg->{payload} };
       }
       else {
-        warn "Good luck with that payload buddy";
+        carp 'Good luck with that payload buddy';
       }
     }
   }
