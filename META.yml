@@ -36,6 +36,7 @@ provides:
     file: lib/Pod/Weaver/PluginBundle/Author/KENTNL/Role/Easy.pm
     version: '0.001000'
 requires:
+  Carp: '0'
   Module::Runtime: '0'
   Moo: '0'
   Moo::Role: '0'
@@ -50,6 +51,7 @@ version: '0.001000'
 x_BuiltWith:
   modules:
     CPAN::Meta: '2.142060'
+    Carp: '1.34'
     Dist::Zilla::Plugin::Author::KENTNL::RecommendFixes: '0.002003'
     Dist::Zilla::Plugin::Authority: '1.006'
     Dist::Zilla::Plugin::AutoPrereqs: '5.020'

@@ -20,6 +20,7 @@ sub instance_config {
   my ($self) = @_;
   $self->inhale_bundle('@CorePrep');
   $self->add_entry('-SingleEncoding');
+  return;
 }
 
 no Moo;

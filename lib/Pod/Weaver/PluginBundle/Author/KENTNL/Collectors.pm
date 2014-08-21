@@ -11,6 +11,7 @@ our $VERSION = '0.001000';
 
 our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
 
+use Carp qw( carp croak );
 use Moo qw( has with );
 use MooX::Lsub qw( lsub );
 with 'Pod::Weaver::PluginBundle::Author::KENTNL::Role::Easy';
@@ -74,11 +75,11 @@ sub instance_config {
       );
       next;
     }
-    if ( my ( $short, $long ) = $command =~ /\A\s*([^\s]+)\s*=\s*(.+?)\s*\z/msx ) {
+    if ( my ( $short, $long ) = $command =~ /\A\s*(\S+)\s*=\s*(.+?)\s*\z/msx ) {
       $self->add_named_entry( 'Collect.' . $command => 'Collect', { command => $short, header => $long, } );
       next;
     }
-    warn "Don't know what to do with command $command";
+    carp "Don't know what to do with command $command";
   }
   $self->add_named_entry( 'Region.post_commands', 'Region', { region_name => 'post_commands' } );
   return;
