@@ -15,6 +15,10 @@ use Moo qw( with );
 
 with 'Pod::Weaver::PluginBundle::Author::KENTNL::Role::Easy';
 
+
+
+
+
 sub bundle_prefix { return '@A:KNL:Postlude' }
 
 sub instance_config {
@@ -58,6 +62,8 @@ Is pretty much
   [Contributors]
   [Legal]
   [Region / post_postlude]
+
+=for Pod::Coverage bundle_prefix instance_config
 
 =head1 AUTHOR
 

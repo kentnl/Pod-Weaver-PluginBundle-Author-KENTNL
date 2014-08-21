@@ -16,6 +16,10 @@ use Moo qw( has with );
 use MooX::Lsub qw( lsub );
 with 'Pod::Weaver::PluginBundle::Author::KENTNL::Role::Easy';
 
+
+
+
+
 sub mvp_aliases { return { command => qw[commands] } }
 sub mvp_multivalue_args { return qw( commands ) }
 sub bundle_prefix       { return '@A:KNL:Collectors' }
@@ -63,6 +67,10 @@ my $command_aliases = {
 lsub commands => sub {
   return [qw( attr method pattr pmethod )];
 };
+
+
+
+
 
 sub instance_config {
   my ($self) = @_;
@@ -163,6 +171,10 @@ Default value:
 =item * C<([^\s]+) = (.+)> : C<$2> command = C<$1>
 
 =back
+
+=for Pod::Coverage mvp_aliases mvp_multivalue_args bundle_prefix
+
+=for Pod::Coverage instance_config
 
 =head1 AUTHOR
 

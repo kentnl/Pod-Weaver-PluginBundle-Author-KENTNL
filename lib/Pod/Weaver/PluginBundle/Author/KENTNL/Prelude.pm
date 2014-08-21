@@ -14,6 +14,10 @@ our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
 use Moo qw( with );
 with 'Pod::Weaver::PluginBundle::Author::KENTNL::Role::Easy';
 
+
+
+
+
 sub bundle_prefix { return '@A:KNL:Prelude' }
 
 sub instance_config {
@@ -61,6 +65,8 @@ is pretty much
   [Generic / DESCRIPTION]
   [Generic / OVERVIEW]
   [Region / post_prelude]
+
+=for Pod::Coverage bundle_prefix instance_config
 
 =head1 AUTHOR
 

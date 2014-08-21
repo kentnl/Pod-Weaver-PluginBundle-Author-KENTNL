@@ -39,6 +39,24 @@ sub _push_state_prefixed {
   return;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 sub add_entry {
   my ( $self, $name, $config ) = @_;
   $config = {} unless defined $config;
@@ -46,6 +64,38 @@ sub add_entry {
   $self->_push_state_prefixed( $name, $plugin, $config );
   return;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 sub add_named_entry {
   my ( $self, $alias, $plugin_name, $config ) = @_;
@@ -157,6 +207,53 @@ version 0.001000
     $self->inhale_bundle( '@bundle', $maybeconfig );
   }
   1;
+
+=head1 METHODS
+
+=head2 C<add_entry>
+
+Add a simple plugin to this bundle.
+
+  ->add_entry( "Foo" , { a => 1 , b => [ 1, 2 ] } );
+  ->add_entry( $name , { $config } );
+
+Roughly corresponds to
+
+  [Foo / SomePrefix/Foo]
+  a = 1
+  b = 1
+  b = 2
+
+For things that need to have unique names for plugins, use C<add_named_entry>
+
+=head2 C<add_named_entry>
+
+  ->add_named_entry( "Foo" , "Bar" , { a => 1, b => [1, 2]});
+  ->add_entry( $name , { $config } );
+
+Roughly corresponds to
+
+  [Bar / SomePrefix/Foo]
+  a = 1
+  b = 1
+  b = 2
+
+B<NOTE:> C<$name> is subject to prefix expansion. Use C<$config> explicitly to avoid
+side effects. That is, this mechanism only serves to create unique identifiers I<within> a bundle.
+
+Bundle prefixing should make sure it stays unique beyond that.
+
+Relying on "name" field to communicate state within a bundle will break as soon as your bundle is C<inhaled>.
+
+So. Use C<$config> ;)
+
+  ->add_named_entry("SYNOPSIS", "Generic"); # Bad, will look for MyPrefix/SYNOPSIS, which won't exist.
+
+  ->add_named_entry("SYNOPSIS", "Generic", { header => 'SYNOPSIS' }); # Resilient code.
+    # { name => "MyPrefix/SYNOPIS",
+    #   package => "Pod::Weaver::Section::Generic",
+    #   payload => { header => 'SYNOPSIS' }
+    # }
 
 =head1 AUTHOR
 
