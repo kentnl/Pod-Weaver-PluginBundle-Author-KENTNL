@@ -23,7 +23,7 @@ requires 'bundle_prefix';
 requires 'instance_config';
 
 sub _prefixify {
-  my ( $self, $oldname, ) = @_;  # called as ->( name, $pluginame ) just in case
+  my ( $self, $oldname, ) = @_;    # called as ->( name, $pluginame ) just in case
   return $self->bundle_prefix . q[/] . $oldname;
 }
 

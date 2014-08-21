@@ -64,7 +64,7 @@ version 0.001000
   ; command[].default = [ attr method pattr pmethod ]
   ; command[].entry_type[0] = KNOWNCOMMANDNAME
   ; command[].entry_type[1] = COMMANDNAME = DESCRIPTION
-  ;        KNOWNCOMMANDNAME.enums =     
+  ;        KNOWNCOMMANDNAME.enums =
   ;             = method        ; METHODS
   ;             = attr          ; ATTRIBUTES
   ;             = cattr         ; ATTRIBUTES / CONSTRUCTOR ARGUMENTS
