@@ -22,7 +22,7 @@ my @stopwords = (qw());
 for my $wordlist (@stopwords) {
   $bundle->add_or_append_policy_field( 'Documentation::PodSpelling' => ( 'stop_words' => $wordlist ) );
 }
-for my $wordlist (qw( Author CorePrep A ) ) {
+for my $wordlist (qw( Author CorePrep A: ) ) {
   $bundle->add_or_append_policy_field( 'ValuesAndExpressions::RequireInterpolationOfMetachars' => ( 'rcs_keywords' => $wordlist ) );
 }
 #$bundle->add_or_append_policy_field(
