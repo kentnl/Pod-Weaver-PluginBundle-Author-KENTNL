@@ -310,19 +310,11 @@ x_Dist_Zilla:
               version: '4.006'
             -
               class: Pod::Weaver::Section::Collect
-              name: '@A:KNL:Collectors/Collect.attr'
-              version: '4.006'
-            -
-              class: Pod::Weaver::Section::Collect
               name: '@A:KNL:Collectors/Collect.method'
               version: '4.006'
             -
               class: Pod::Weaver::Section::Collect
-              name: '@A:KNL:Collectors/Collect.pattr'
-              version: '4.006'
-            -
-              class: Pod::Weaver::Section::Collect
-              name: '@A:KNL:Collectors/Collect.pmethod'
+              name: '@A:KNL:Collectors/Collect.attr'
               version: '4.006'
             -
               class: Pod::Weaver::Section::Leftovers
