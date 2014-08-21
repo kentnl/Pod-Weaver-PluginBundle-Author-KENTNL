@@ -313,6 +313,10 @@ x_Dist_Zilla:
               name: '@A:KNL:Collectors/Collect.method'
               version: '4.006'
             -
+              class: Pod::Weaver::Section::Collect
+              name: '@A:KNL:Collectors/Collect.xattr = Extended Attributes'
+              version: '4.006'
+            -
               class: Pod::Weaver::Section::Leftovers
               name: Leftovers
               version: '4.006'
