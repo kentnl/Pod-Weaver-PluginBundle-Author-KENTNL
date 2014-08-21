@@ -112,27 +112,27 @@
    "provides" : {
       "Pod::Weaver::PluginBundle::Author::KENTNL" : {
          "file" : "lib/Pod/Weaver/PluginBundle/Author/KENTNL.pm",
-         "version" : "0.001000"
+         "version" : "0.001001"
       },
       "Pod::Weaver::PluginBundle::Author::KENTNL::Collectors" : {
          "file" : "lib/Pod/Weaver/PluginBundle/Author/KENTNL/Collectors.pm",
-         "version" : "0.001000"
+         "version" : "0.001001"
       },
       "Pod::Weaver::PluginBundle::Author::KENTNL::Core" : {
          "file" : "lib/Pod/Weaver/PluginBundle/Author/KENTNL/Core.pm",
-         "version" : "0.001000"
+         "version" : "0.001001"
       },
       "Pod::Weaver::PluginBundle::Author::KENTNL::Postlude" : {
          "file" : "lib/Pod/Weaver/PluginBundle/Author/KENTNL/Postlude.pm",
-         "version" : "0.001000"
+         "version" : "0.001001"
       },
       "Pod::Weaver::PluginBundle::Author::KENTNL::Prelude" : {
          "file" : "lib/Pod/Weaver/PluginBundle/Author/KENTNL/Prelude.pm",
-         "version" : "0.001000"
+         "version" : "0.001001"
       },
       "Pod::Weaver::PluginBundle::Author::KENTNL::Role::Easy" : {
          "file" : "lib/Pod/Weaver/PluginBundle/Author/KENTNL/Role/Easy.pm",
-         "version" : "0.001000"
+         "version" : "0.001001"
       }
    },
    "release_status" : "stable",
@@ -147,7 +147,7 @@
          "web" : "https://github.com/kentnl/Pod-Weaver-PluginBundle-Author-KENTNL"
       }
    },
-   "version" : "0.001000",
+   "version" : "0.001001",
    "x_BuiltWith" : {
       "modules" : {
          "CPAN::Meta" : "2.142060",
@@ -708,7 +708,7 @@
                "Dist::Zilla::Plugin::Git::Tag" : {
                   "branch" : null,
                   "signed" : 0,
-                  "tag" : "0.001000-source",
+                  "tag" : "0.001001-source",
                   "tag_format" : "%v-source",
                   "tag_message" : "v%v",
                   "time_zone" : "local"
@@ -779,7 +779,7 @@
                "Dist::Zilla::Plugin::Git::Tag" : {
                   "branch" : "releases",
                   "signed" : 0,
-                  "tag" : "0.001000",
+                  "tag" : "0.001001",
                   "tag_format" : "%v",
                   "tag_message" : "v%v",
                   "time_zone" : "local"
