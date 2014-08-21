@@ -1,5 +1,5 @@
 {
-   "abstract" : "# AUTHORITY",
+   "abstract" : "KENTNL's amazing Pod::Weaver Plugin Bundle.",
    "author" : [
       "Kent Fredric <kentfredric@gmail.com>"
    ],
@@ -87,7 +87,6 @@
             "Moo" : "0",
             "Moo::Role" : "0",
             "MooX::Lsub" : "0",
-            "Moose" : "0",
             "Pod::Weaver::Config::Assembler" : "0",
             "Try::Tiny" : "0",
             "perl" : "5.008",
@@ -121,6 +120,10 @@
       },
       "Pod::Weaver::PluginBundle::Author::KENTNL::Core" : {
          "file" : "lib/Pod/Weaver/PluginBundle/Author/KENTNL/Core.pm",
+         "version" : "0.001000"
+      },
+      "Pod::Weaver::PluginBundle::Author::KENTNL::Postlude" : {
+         "file" : "lib/Pod/Weaver/PluginBundle/Author/KENTNL/Postlude.pm",
          "version" : "0.001000"
       },
       "Pod::Weaver::PluginBundle::Author::KENTNL::Prelude" : {
@@ -190,7 +193,6 @@
          "Moo" : "1.006000",
          "Moo::Role" : "1.006000",
          "MooX::Lsub" : "0.001003",
-         "Moose" : "2.1211",
          "Pod::Coverage::TrustPod" : "0.100003",
          "Pod::Weaver::Config::Assembler" : "4.006",
          "Test::CPAN::Changes" : "0.30",
@@ -399,6 +401,7 @@
                      "lib/Pod/Weaver/PluginBundle/Author/KENTNL.pm",
                      "lib/Pod/Weaver/PluginBundle/Author/KENTNL/Collectors.pm",
                      "lib/Pod/Weaver/PluginBundle/Author/KENTNL/Core.pm",
+                     "lib/Pod/Weaver/PluginBundle/Author/KENTNL/Postlude.pm",
                      "lib/Pod/Weaver/PluginBundle/Author/KENTNL/Prelude.pm",
                      "lib/Pod/Weaver/PluginBundle/Author/KENTNL/Role/Easy.pm"
                   ],
@@ -444,117 +447,87 @@
                   "plugins" : [
                      {
                         "class" : "Pod::Weaver::Plugin::EnsurePod5",
-                        "name" : "@A:KNL:Core/@CorePrep/EnsurePod5",
+                        "name" : "@A:KNL/@A:KNL:Core/@CorePrep/EnsurePod5",
                         "version" : "4.006"
                      },
                      {
                         "class" : "Pod::Weaver::Plugin::H1Nester",
-                        "name" : "@A:KNL:Core/@CorePrep/H1Nester",
+                        "name" : "@A:KNL/@A:KNL:Core/@CorePrep/H1Nester",
                         "version" : "4.006"
                      },
                      {
                         "class" : "Pod::Weaver::Plugin::SingleEncoding",
-                        "name" : "@A:KNL:Core/-SingleEncoding",
+                        "name" : "@A:KNL/@A:KNL:Core/-SingleEncoding",
                         "version" : "4.006"
                      },
                      {
                         "class" : "Pod::Weaver::Section::Name",
-                        "name" : "@A:KNL:Prelude/Name",
+                        "name" : "@A:KNL/@A:KNL:Prelude/Name",
                         "version" : "4.006"
                      },
                      {
                         "class" : "Pod::Weaver::Section::Version",
-                        "name" : "@A:KNL:Prelude/Version",
+                        "name" : "@A:KNL/@A:KNL:Prelude/Version",
                         "version" : "4.006"
                      },
                      {
                         "class" : "Pod::Weaver::Section::Region",
-                        "name" : "@A:KNL:Prelude/Region.pre_prelude",
+                        "name" : "@A:KNL/@A:KNL:Prelude/Region.pre_prelude",
                         "version" : "4.006"
                      },
                      {
                         "class" : "Pod::Weaver::Section::Generic",
-                        "name" : "@A:KNL:Prelude/QUICKREF",
+                        "name" : "@A:KNL/@A:KNL:Prelude/QUICKREF",
                         "version" : "4.006"
                      },
                      {
                         "class" : "Pod::Weaver::Section::Generic",
-                        "name" : "@A:KNL:Prelude/SYNOPSIS",
+                        "name" : "@A:KNL/@A:KNL:Prelude/SYNOPSIS",
                         "version" : "4.006"
                      },
                      {
                         "class" : "Pod::Weaver::Section::Generic",
-                        "name" : "@A:KNL:Prelude/DESCRIPTION",
+                        "name" : "@A:KNL/@A:KNL:Prelude/DESCRIPTION",
                         "version" : "4.006"
                      },
                      {
                         "class" : "Pod::Weaver::Section::Generic",
-                        "name" : "@A:KNL:Prelude/OVERVIEW",
+                        "name" : "@A:KNL/@A:KNL:Prelude/OVERVIEW",
                         "version" : "4.006"
                      },
                      {
                         "class" : "Pod::Weaver::Section::Region",
-                        "name" : "@A:KNL:Prelude/Region.post_prelude",
+                        "name" : "@A:KNL/@A:KNL:Prelude/Region.post_prelude",
                         "version" : "4.006"
                      },
                      {
                         "class" : "Pod::Weaver::Section::Region",
-                        "name" : "@A:KNL:Collectors/Region.pre_commands",
-                        "version" : "4.006"
-                     },
-                     {
-                        "class" : "Pod::Weaver::Section::Collect",
-                        "name" : "@A:KNL:Collectors/Collect.attr",
-                        "version" : "4.006"
-                     },
-                     {
-                        "class" : "Pod::Weaver::Section::Collect",
-                        "name" : "@A:KNL:Collectors/Collect.method",
-                        "version" : "4.006"
-                     },
-                     {
-                        "class" : "Pod::Weaver::Section::Collect",
-                        "name" : "@A:KNL:Collectors/Collect.pattr",
-                        "version" : "4.006"
-                     },
-                     {
-                        "class" : "Pod::Weaver::Section::Collect",
-                        "name" : "@A:KNL:Collectors/Collect.pmethod",
-                        "version" : "4.006"
-                     },
-                     {
-                        "class" : "Pod::Weaver::Section::Region",
-                        "name" : "@A:KNL:Collectors/Region.post_commands",
-                        "version" : "4.006"
-                     },
-                     {
-                        "class" : "Pod::Weaver::Section::Region",
-                        "name" : "@A:KNL:Postlude/Region.pre_postlude",
+                        "name" : "@A:KNL/@A:KNL:Postlude/Region.pre_postlude",
                         "version" : "4.006"
                      },
                      {
                         "class" : "Pod::Weaver::Section::Leftovers",
-                        "name" : "@A:KNL:Postlude/Leftovers",
+                        "name" : "@A:KNL/@A:KNL:Postlude/Leftovers",
                         "version" : "4.006"
                      },
                      {
                         "class" : "Pod::Weaver::Section::Authors",
-                        "name" : "@A:KNL:Postlude/Authors",
+                        "name" : "@A:KNL/@A:KNL:Postlude/Authors",
                         "version" : "4.006"
                      },
                      {
                         "class" : "Pod::Weaver::Section::Contributors",
-                        "name" : "@A:KNL:Postlude/Contributors",
+                        "name" : "@A:KNL/@A:KNL:Postlude/Contributors",
                         "version" : "0.008"
                      },
                      {
                         "class" : "Pod::Weaver::Section::Legal",
-                        "name" : "@A:KNL:Postlude/Legal",
+                        "name" : "@A:KNL/@A:KNL:Postlude/Legal",
                         "version" : "4.006"
                      },
                      {
                         "class" : "Pod::Weaver::Section::Region",
-                        "name" : "@A:KNL:Postlude/Region.post_postlude",
+                        "name" : "@A:KNL/@A:KNL:Postlude/Region.post_postlude",
                         "version" : "4.006"
                      }
                   ]

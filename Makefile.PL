@@ -10,7 +10,7 @@ use ExtUtils::MakeMaker ;
 
 
 my %WriteMakefileArgs = (
-  "ABSTRACT" => "# AUTHORITY",
+  "ABSTRACT" => "KENTNL's amazing Pod::Weaver Plugin Bundle.",
   "AUTHOR" => "Kent Fredric <kentfredric\@gmail.com>",
   "CONFIGURE_REQUIRES" => {
     "ExtUtils::MakeMaker" => 0
@@ -25,7 +25,6 @@ my %WriteMakefileArgs = (
     "Moo" => 0,
     "Moo::Role" => 0,
     "MooX::Lsub" => 0,
-    "Moose" => 0,
     "Pod::Weaver::Config::Assembler" => 0,
     "Try::Tiny" => 0,
     "strict" => 0,
@@ -53,7 +52,6 @@ my %FallbackPrereqs = (
   "Moo" => 0,
   "Moo::Role" => 0,
   "MooX::Lsub" => 0,
-  "Moose" => 0,
   "Pod::Weaver::Config::Assembler" => 0,
   "Test::Differences" => 0,
   "Test::More" => "0.89",

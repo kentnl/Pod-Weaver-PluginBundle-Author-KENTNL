@@ -72,7 +72,6 @@ do { my $x = {
                                       'Moo' => '0',
                                       'Moo::Role' => '0',
                                       'MooX::Lsub' => '0',
-                                      'Moose' => '0',
                                       'Pod::Weaver::Config::Assembler' => '0',
                                       'Try::Tiny' => '0',
                                       'perl' => '5.008',

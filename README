@@ -1,5 +1,6 @@
 NAME
-    Pod::Weaver::PluginBundle::Author::KENTNL - # AUTHORITY
+    Pod::Weaver::PluginBundle::Author::KENTNL - KENTNL's amazing Pod::Weaver
+    Plugin Bundle.
 
 VERSION
     version 0.001000
