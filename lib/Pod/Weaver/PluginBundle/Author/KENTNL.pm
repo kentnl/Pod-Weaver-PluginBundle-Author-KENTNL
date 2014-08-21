@@ -14,9 +14,17 @@ our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
 use Moo qw( has with );
 with 'Pod::Weaver::PluginBundle::Author::KENTNL::Role::Easy';
 
+
+
+
+
 sub bundle_prefix       { return '@A:KNL' }
 sub mvp_aliases         { return { command => qw[commands] } }
 sub mvp_multivalue_args { return qw( commands ) }
+
+
+
+
 
 has 'commands' => (
   is        => ro  =>,
@@ -24,6 +32,10 @@ has 'commands' => (
   lazy      => 1,
   default   => sub { [] },
 );
+
+
+
+
 
 sub instance_config {
   my ($self) = @_;
@@ -108,6 +120,12 @@ C<Pod::Weaver::PluginBundle::Author::KENTNL::Postlude>
 >>
 
 =back
+
+=for Pod::Coverage bundle_prefix mvp_aliases mvp_multivalue_args
+
+=for Pod::Coverage has_commands
+
+=for Pod::Coverage instance_config
 
 =head1 AUTHOR
 
