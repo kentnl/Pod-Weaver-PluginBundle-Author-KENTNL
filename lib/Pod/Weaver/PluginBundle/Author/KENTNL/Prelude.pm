@@ -26,6 +26,7 @@ sub instance_config {
   $self->add_named_entry( 'DESCRIPTION'         => 'Generic', { header      => 'DESCRIPTION' } );
   $self->add_named_entry( 'OVERVIEW'            => 'Generic', { header      => 'OVERVIEW' } );
   $self->add_named_entry( 'Region.post_prelude' => 'Region',  { region_name => 'post_prelude', } );
+  return;
 }
 
 no Moo;

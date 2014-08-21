@@ -25,6 +25,7 @@ sub instance_config {
   $self->add_entry( 'Contributors' => {} );
   $self->add_entry( 'Legal'        => {} );
   $self->add_named_entry( 'Region.post_postlude' => 'Region', { region_name => 'post_postlude', } );
+  return;
 }
 
 no Moo;
