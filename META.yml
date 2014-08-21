@@ -5,6 +5,7 @@ author:
 build_requires:
   ExtUtils::MakeMaker: '0'
   File::Spec: '0'
+  Test::Differences: '0'
   Test::More: '0.89'
 configure_requires:
   ExtUtils::MakeMaker: '0'
@@ -106,6 +107,7 @@ x_BuiltWith:
     Pod::Weaver::Config::Assembler: '4.006'
     Test::CPAN::Changes: '0.30'
     Test::CPAN::Meta: '0.23'
+    Test::Differences: '0.62'
     Test::Kwalitee: '1.22'
     Test::More: '1.001003'
     Test::Pod: '1.48'
@@ -312,31 +314,43 @@ x_Dist_Zilla:
               version: '4.006'
             -
               class: Pod::Weaver::Section::Name
-              name: '@A:KNL:Prefix/Name'
+              name: '@A:KNL:Prelude/Name'
               version: '4.006'
             -
               class: Pod::Weaver::Section::Version
-              name: '@A:KNL:Prefix/Version'
-              version: '4.006'
-            -
-              class: Pod::Weaver::Section::Generic
-              name: '@A:KNL:Prefix/QUICKREF'
-              version: '4.006'
-            -
-              class: Pod::Weaver::Section::Generic
-              name: '@A:KNL:Prefix/SYNOPSIS'
-              version: '4.006'
-            -
-              class: Pod::Weaver::Section::Generic
-              name: '@A:KNL:Prefix/DESCRIPTION'
-              version: '4.006'
-            -
-              class: Pod::Weaver::Section::Generic
-              name: '@A:KNL:Prefix/OVERVIEW'
+              name: '@A:KNL:Prelude/Version'
               version: '4.006'
             -
               class: Pod::Weaver::Section::Region
-              name: '@A:KNL:Prefix/Region'
+              name: '@A:KNL:Prelude/Region.pre_prelude'
+              version: '4.006'
+            -
+              class: Pod::Weaver::Section::Generic
+              name: '@A:KNL:Prelude/QUICKREF'
+              version: '4.006'
+            -
+              class: Pod::Weaver::Section::Generic
+              name: '@A:KNL:Prelude/SYNOPSIS'
+              version: '4.006'
+            -
+              class: Pod::Weaver::Section::Generic
+              name: '@A:KNL:Prelude/DESCRIPTION'
+              version: '4.006'
+            -
+              class: Pod::Weaver::Section::Generic
+              name: '@A:KNL:Prelude/OVERVIEW'
+              version: '4.006'
+            -
+              class: Pod::Weaver::Section::Region
+              name: '@A:KNL:Prelude/Region.post_prelude'
+              version: '4.006'
+            -
+              class: Pod::Weaver::Section::Region
+              name: '@A:KNL:Collectors/Region.pre_commands'
+              version: '4.006'
+            -
+              class: Pod::Weaver::Section::Collect
+              name: '@A:KNL:Collectors/Collect.attr'
               version: '4.006'
             -
               class: Pod::Weaver::Section::Collect
@@ -344,23 +358,39 @@ x_Dist_Zilla:
               version: '4.006'
             -
               class: Pod::Weaver::Section::Collect
-              name: '@A:KNL:Collectors/Collect.xattr = Extended Attributes'
+              name: '@A:KNL:Collectors/Collect.pattr'
               version: '4.006'
             -
-              class: Pod::Weaver::Section::Leftovers
-              name: Leftovers
+              class: Pod::Weaver::Section::Collect
+              name: '@A:KNL:Collectors/Collect.pmethod'
               version: '4.006'
             -
               class: Pod::Weaver::Section::Region
-              name: postlude
+              name: '@A:KNL:Collectors/Region.post_commands'
+              version: '4.006'
+            -
+              class: Pod::Weaver::Section::Region
+              name: '@A:KNL:Postlude/Region.pre_postlude'
+              version: '4.006'
+            -
+              class: Pod::Weaver::Section::Leftovers
+              name: '@A:KNL:Postlude/Leftovers'
               version: '4.006'
             -
               class: Pod::Weaver::Section::Authors
-              name: Authors
+              name: '@A:KNL:Postlude/Authors'
               version: '4.006'
             -
+              class: Pod::Weaver::Section::Contributors
+              name: '@A:KNL:Postlude/Contributors'
+              version: '0.008'
+            -
               class: Pod::Weaver::Section::Legal
-              name: Legal
+              name: '@A:KNL:Postlude/Legal'
+              version: '4.006'
+            -
+              class: Pod::Weaver::Section::Region
+              name: '@A:KNL:Postlude/Region.post_postlude'
               version: '4.006'
       name: '@Author::KENTNL/PodWeaver'
       version: '4.006'

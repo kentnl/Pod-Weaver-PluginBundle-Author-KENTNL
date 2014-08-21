@@ -12,17 +12,18 @@ our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
 use Moo qw( with );
 with 'Pod::Weaver::PluginBundle::Author::KENTNL::Role::Easy';
 
-sub bundle_prefix { return '@A:KNL:Prefix' }
+sub bundle_prefix { return '@A:KNL:Prelude' }
 
 sub instance_config {
   my ($self) = @_;
   $self->add_entry('Name');
   $self->add_entry('Version');
-  $self->add_named_entry( 'QUICKREF'    => 'Generic', { header => 'QUICK REFERENCE' } );
-  $self->add_named_entry( 'SYNOPSIS'    => 'Generic', { header => 'SYNOPSIS' } );
-  $self->add_named_entry( 'DESCRIPTION' => 'Generic', { header => 'DESCRIPTION' } );
-  $self->add_named_entry( 'OVERVIEW'    => 'Generic', { header => 'OVERVIEW' } );
-  $self->add_entry( 'Region', { region_name => 'prelude', } );
+  $self->add_named_entry( 'Region.pre_prelude'  => 'Region',  { region_name => 'pre_prelude', } );
+  $self->add_named_entry( 'QUICKREF'            => 'Generic', { header      => 'QUICK REFERENCE' } );
+  $self->add_named_entry( 'SYNOPSIS'            => 'Generic', { header      => 'SYNOPSIS' } );
+  $self->add_named_entry( 'DESCRIPTION'         => 'Generic', { header      => 'DESCRIPTION' } );
+  $self->add_named_entry( 'OVERVIEW'            => 'Generic', { header      => 'OVERVIEW' } );
+  $self->add_named_entry( 'Region.post_prelude' => 'Region',  { region_name => 'post_prelude', } );
 }
 
 no Moo;

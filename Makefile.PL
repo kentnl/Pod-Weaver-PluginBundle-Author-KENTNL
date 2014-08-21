@@ -35,6 +35,7 @@ my %WriteMakefileArgs = (
   "TEST_REQUIRES" => {
     "ExtUtils::MakeMaker" => 0,
     "File::Spec" => 0,
+    "Test::Differences" => 0,
     "Test::More" => "0.89"
   },
   "VERSION" => "0.001000",
@@ -54,6 +55,7 @@ my %FallbackPrereqs = (
   "MooX::Lsub" => 0,
   "Moose" => 0,
   "Pod::Weaver::Config::Assembler" => 0,
+  "Test::Differences" => 0,
   "Test::More" => "0.89",
   "Try::Tiny" => 0,
   "strict" => 0,

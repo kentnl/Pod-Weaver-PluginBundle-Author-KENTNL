@@ -24,6 +24,7 @@ t/00-compile/lib_Pod_Weaver_PluginBundle_Author_KENTNL_Role_Easy_pm.t
 t/00-compile/lib_Pod_Weaver_PluginBundle_Author_KENTNL_pm.t
 t/00-report-prereqs.dd
 t/00-report-prereqs.t
+t/core_inflate.t
 weaver.ini
 xt/author/critic.t
 xt/release/cpan-changes.t
