@@ -1,0 +1,57 @@
+NAME
+    Pod::Weaver::PluginBundle::Author::KENTNL - KENTNL's amazing Pod::Weaver
+    Plugin Bundle.
+
+VERSION
+    version 0.001000
+
+QUICK REFERENCE
+      [@Author::KENTNL]
+
+      -~- Inherited from @Author::KENTNL::Collectors -~-
+      ; command[].default = [ required attr method pattr pmethod ]
+      ; command[].entry_type[0] = KNOWNCOMMANDNAME
+      ; command[].entry_type[1] = COMMANDNAME = DESCRIPTION
+      ;        KNOWNCOMMANDNAME.enums =
+      ;             = required      ; REQUIRED METHODS
+      ;             = method        ; METHODS
+      ;             = attr          ; ATTRIBUTES
+      ;             = cattr         ; ATTRIBUTES / CONSTRUCTOR ARGUMENTS
+      ;             = pmethod       ; PRIVATE METHODS
+      ;             = pattr         ; PRIVATE ATTRIBUTES
+
+SYNOPSIS
+      [@Author::KENTNL]
+
+    This is basically the same as
+
+      [@Author::KENTNL::Core]
+
+      [@Author::KENTNL::Prelude]
+
+      [@Author::KENTNL::Collectors]
+
+      [@Author::KENTNL::Postlude]
+
+    *   "[@Author::KENTNL::Core]" :
+        "Pod::Weaver::PluginBundle::Author::KENTNL::Core"
+
+    *   "[@Author::KENTNL::Prelude]" :
+        "Pod::Weaver::PluginBundle::Author::KENTNL::Prelude"
+
+    *   "[@Author::KENTNL::Collectors]" :
+        "Pod::Weaver::PluginBundle::Author::KENTNL::Collectors"
+
+    *   "[@Author::KENTNL::Postlude]" :
+        "Pod::Weaver::PluginBundle::Author::KENTNL::Postlude"
+
+AUTHOR
+    Kent Fredric <kentfredric@gmail.com>
+
+COPYRIGHT AND LICENSE
+    This software is copyright (c) 2014 by Kent Fredric
+    <kentfredric@gmail.com>.
+
+    This is free software; you can redistribute it and/or modify it under
+    the same terms as the Perl 5 programming language system itself.
+
