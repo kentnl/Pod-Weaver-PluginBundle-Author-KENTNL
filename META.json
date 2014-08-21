@@ -462,11 +462,6 @@
                         "version" : "4.006"
                      },
                      {
-                        "class" : "Pod::Weaver::Section::Collect",
-                        "name" : "@A:KNL:Collectors/Collect.attr",
-                        "version" : "4.006"
-                     },
-                     {
                         "class" : "Pod::Weaver::Section::Leftovers",
                         "name" : "Leftovers",
                         "version" : "4.006"
