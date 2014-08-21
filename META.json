@@ -82,7 +82,14 @@
       },
       "runtime" : {
          "requires" : {
+            "Data::Dump" : "0",
+            "Module::Runtime" : "0",
+            "Moo" : "0",
+            "Moo::Role" : "0",
+            "MooX::Lsub" : "0",
             "Moose" : "0",
+            "Pod::Weaver::Config::Assembler" : "0",
+            "Try::Tiny" : "0",
             "perl" : "5.008",
             "strict" : "0",
             "utf8" : "0",
@@ -106,6 +113,22 @@
       "Pod::Weaver::PluginBundle::Author::KENTNL" : {
          "file" : "lib/Pod/Weaver/PluginBundle/Author/KENTNL.pm",
          "version" : "0.001000"
+      },
+      "Pod::Weaver::PluginBundle::Author::KENTNL::Collectors" : {
+         "file" : "lib/Pod/Weaver/PluginBundle/Author/KENTNL/Collectors.pm",
+         "version" : "0.001000"
+      },
+      "Pod::Weaver::PluginBundle::Author::KENTNL::Core" : {
+         "file" : "lib/Pod/Weaver/PluginBundle/Author/KENTNL/Core.pm",
+         "version" : "0.001000"
+      },
+      "Pod::Weaver::PluginBundle::Author::KENTNL::Prelude" : {
+         "file" : "lib/Pod/Weaver/PluginBundle/Author/KENTNL/Prelude.pm",
+         "version" : "0.001000"
+      },
+      "Pod::Weaver::PluginBundle::Author::KENTNL::Role::Easy" : {
+         "file" : "lib/Pod/Weaver/PluginBundle/Author/KENTNL/Role/Easy.pm",
+         "version" : "0.001000"
       }
    },
    "release_status" : "stable",
@@ -113,6 +136,7 @@
    "x_BuiltWith" : {
       "modules" : {
          "CPAN::Meta" : "2.142060",
+         "Data::Dump" : "1.22",
          "Dist::Zilla::Plugin::Author::KENTNL::RecommendFixes" : "0.002003",
          "Dist::Zilla::Plugin::Authority" : "1.006",
          "Dist::Zilla::Plugin::AutoPrereqs" : "5.020",
@@ -161,14 +185,20 @@
          "Dist::Zilla::PluginBundle::Author::KENTNL::Lite" : "2.001000",
          "ExtUtils::MakeMaker" : "6.98",
          "File::Spec" : "3.49",
+         "Module::Runtime" : "0.014",
+         "Moo" : "1.006000",
+         "Moo::Role" : "1.006000",
+         "MooX::Lsub" : "0.001003",
          "Moose" : "2.1211",
          "Pod::Coverage::TrustPod" : "0.100003",
+         "Pod::Weaver::Config::Assembler" : "4.006",
          "Test::CPAN::Changes" : "0.30",
          "Test::CPAN::Meta" : "0.23",
          "Test::Kwalitee" : "1.22",
          "Test::More" : "1.001003",
          "Test::Pod" : "1.48",
          "Test::Pod::Coverage" : "1.10",
+         "Try::Tiny" : "0.22",
          "strict" : "1.08",
          "utf8" : "1.14",
          "warnings" : "1.26"
@@ -364,7 +394,11 @@
             "config" : {
                "Dist::Zilla::Plugin::Test::Compile::PerFile" : {
                   "file" : [
-                     "lib/Pod/Weaver/PluginBundle/Author/KENTNL.pm"
+                     "lib/Pod/Weaver/PluginBundle/Author/KENTNL.pm",
+                     "lib/Pod/Weaver/PluginBundle/Author/KENTNL/Collectors.pm",
+                     "lib/Pod/Weaver/PluginBundle/Author/KENTNL/Core.pm",
+                     "lib/Pod/Weaver/PluginBundle/Author/KENTNL/Prelude.pm",
+                     "lib/Pod/Weaver/PluginBundle/Author/KENTNL/Role/Easy.pm"
                   ],
                   "path_translator" : "base64_filter",
                   "prefix" : "t/00-compile",
