@@ -15,17 +15,16 @@ use Moo qw( has with );
 use MooX::Lsub qw( lsub );
 with 'Pod::Weaver::PluginBundle::Author::KENTNL::Role::Easy';
 
-sub mvp_aliases { { command => qw[commands] } }
-sub mvp_multivalue_args { qw( commands ) }
-
-sub bundle_prefix { '@A:KNL:Collectors' }
+sub mvp_aliases { return { command => qw[commands] } }
+sub mvp_multivalue_args { return qw( commands ) }
+sub bundle_prefix       { return '@A:KNL:Collectors' }
 
 my $command_aliases = {
-  'method'  => "METHODS",
-  'attr'    => "ATTRIBUTES",
-  'cattr'   => "ATTRIBUTES / CONSTRUCTOR ARGUMENTS",
-  'pmethod' => "PRIVATE METHODS",
-  'pattr'   => "PRIVATE ATTRIBUTES",
+  'method'  => 'METHODS',
+  'attr'    => 'ATTRIBUTES',
+  'cattr'   => 'ATTRIBUTES / CONSTRUCTOR ARGUMENTS',
+  'pmethod' => 'PRIVATE METHODS',
+  'pattr'   => 'PRIVATE ATTRIBUTES',
 };
 
 
@@ -70,29 +69,19 @@ sub instance_config {
   for my $command ( @{ $self->commands } ) {
     if ( exists $command_aliases->{$command} ) {
       $self->add_named_entry(
-        'Collect.' . $command,
-        'Collect',
-        {
-          command => $command,
-          header  => $command_aliases->{$command},
-        }
+        'Collect.' . $command => 'Collect',
+        { command => $command, header => $command_aliases->{$command}, },
       );
       next;
     }
     if ( my ( $short, $long ) = $command =~ /\A\s*([^\s]+)\s*=\s*(.+?)\s*\z/msx ) {
-      $self->add_named_entry(
-        'Collect.' . $command,
-        'Collect',
-        {
-          command => $short,
-          header  => $long,
-        }
-      );
+      $self->add_named_entry( 'Collect.' . $command => 'Collect', { command => $short, header => $long, } );
       next;
     }
     warn "Don't know what to do with command $command";
   }
   $self->add_named_entry( 'Region.post_commands', 'Region', { region_name => 'post_commands' } );
+  return;
 }
 
 no Moo;
