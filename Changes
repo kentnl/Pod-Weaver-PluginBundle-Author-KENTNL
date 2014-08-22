@@ -1,6 +1,8 @@
 Release history for Pod-Weaver-PluginBundle-Author-KENTNL
 
 {{$NEXT}}
+ [Trivial]
+ - Add function and pfunction defaults
 
 0.001001 2014-08-22T08:27:58Z
  [Bugfix]
