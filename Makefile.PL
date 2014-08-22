@@ -46,6 +46,7 @@ my %WriteMakefileArgs = (
     "ExtUtils::MakeMaker" => 0,
     "File::Spec" => 0,
     "Test::Differences" => 0,
+    "Test::Fatal" => 0,
     "Test::More" => "0.89"
   },
   "VERSION" => "0.001001",
@@ -76,6 +77,7 @@ my %FallbackPrereqs = (
   "Pod::Weaver::Section::Region" => 0,
   "Pod::Weaver::Section::Version" => 0,
   "Test::Differences" => 0,
+  "Test::Fatal" => 0,
   "Test::More" => "0.89",
   "Try::Tiny" => 0,
   "strict" => 0,
