@@ -5,7 +5,7 @@ use utf8;
 
 package Pod::Weaver::PluginBundle::Author::KENTNL::Collectors;
 
-our $VERSION = '0.001000';
+our $VERSION = '0.001001';
 
 # ABSTRACT: Sub/Attribute/Whatever but shorter and with defaults
 
@@ -112,7 +112,7 @@ Pod::Weaver::PluginBundle::Author::KENTNL::Collectors - Sub/Attribute/Whatever b
 
 =head1 VERSION
 
-version 0.001000
+version 0.001001
 
 =head1 QUICK REFERENCE
 

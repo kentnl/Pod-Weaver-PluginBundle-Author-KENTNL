@@ -1,5 +1,17 @@
 Release history for Pod-Weaver-PluginBundle-Author-KENTNL
 
+0.001001 2014-08-22T08:27:58Z
+ [Bugfix]
+ - Declare all dependencies directly ( short term fix )
+
+ [Dependencies::Stats]
+ - Dependencies changed since 0.001000, see misc/*.deps* for details
+ - runtime: +11
+ - test: +1
+
+ [Tests]
+ - Make sure all modules are tested
+
 0.001000 2014-08-21T12:38:54Z
  - First version
 

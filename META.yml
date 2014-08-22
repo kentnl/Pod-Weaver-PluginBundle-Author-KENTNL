@@ -6,6 +6,7 @@ build_requires:
   ExtUtils::MakeMaker: '0'
   File::Spec: '0'
   Test::Differences: '0'
+  Test::Fatal: '0'
   Test::More: '0.89'
 configure_requires:
   ExtUtils::MakeMaker: '0'
@@ -19,22 +20,22 @@ name: Pod-Weaver-PluginBundle-Author-KENTNL
 provides:
   Pod::Weaver::PluginBundle::Author::KENTNL:
     file: lib/Pod/Weaver/PluginBundle/Author/KENTNL.pm
-    version: '0.001000'
+    version: '0.001001'
   Pod::Weaver::PluginBundle::Author::KENTNL::Collectors:
     file: lib/Pod/Weaver/PluginBundle/Author/KENTNL/Collectors.pm
-    version: '0.001000'
+    version: '0.001001'
   Pod::Weaver::PluginBundle::Author::KENTNL::Core:
     file: lib/Pod/Weaver/PluginBundle/Author/KENTNL/Core.pm
-    version: '0.001000'
+    version: '0.001001'
   Pod::Weaver::PluginBundle::Author::KENTNL::Postlude:
     file: lib/Pod/Weaver/PluginBundle/Author/KENTNL/Postlude.pm
-    version: '0.001000'
+    version: '0.001001'
   Pod::Weaver::PluginBundle::Author::KENTNL::Prelude:
     file: lib/Pod/Weaver/PluginBundle/Author/KENTNL/Prelude.pm
-    version: '0.001000'
+    version: '0.001001'
   Pod::Weaver::PluginBundle::Author::KENTNL::Role::Easy:
     file: lib/Pod/Weaver/PluginBundle/Author/KENTNL/Role/Easy.pm
-    version: '0.001000'
+    version: '0.001001'
 requires:
   Carp: '0'
   Module::Runtime: '0'
@@ -42,6 +43,17 @@ requires:
   Moo::Role: '0'
   MooX::Lsub: '0'
   Pod::Weaver::Config::Assembler: '0'
+  Pod::Weaver::Plugin::SingleEncoding: '0'
+  Pod::Weaver::PluginBundle::CorePrep: '0'
+  Pod::Weaver::Section::Authors: '0'
+  Pod::Weaver::Section::Collect: '0'
+  Pod::Weaver::Section::Contributors: '0'
+  Pod::Weaver::Section::Generic: '0'
+  Pod::Weaver::Section::Leftovers: '0'
+  Pod::Weaver::Section::Legal: '0'
+  Pod::Weaver::Section::Name: '0'
+  Pod::Weaver::Section::Region: '0'
+  Pod::Weaver::Section::Version: '0'
   Try::Tiny: '0'
   perl: '5.008'
   strict: '0'
@@ -51,7 +63,7 @@ resources:
   bugtracker: https://github.com/kentnl/Pod-Weaver-PluginBundle-Author-KENTNL/issues
   homepage: https://github.com/kentnl/Pod-Weaver-PluginBundle-Author-KENTNL
   repository: https://github.com/kentnl/Pod-Weaver-PluginBundle-Author-KENTNL.git
-version: '0.001000'
+version: '0.001001'
 x_BuiltWith:
   modules:
     CPAN::Meta: '2.142060'
@@ -110,9 +122,21 @@ x_BuiltWith:
     MooX::Lsub: '0.001003'
     Pod::Coverage::TrustPod: '0.100003'
     Pod::Weaver::Config::Assembler: '4.006'
+    Pod::Weaver::Plugin::SingleEncoding: '4.006'
+    Pod::Weaver::PluginBundle::CorePrep: '4.006'
+    Pod::Weaver::Section::Authors: '4.006'
+    Pod::Weaver::Section::Collect: '4.006'
+    Pod::Weaver::Section::Contributors: '0.008'
+    Pod::Weaver::Section::Generic: '4.006'
+    Pod::Weaver::Section::Leftovers: '4.006'
+    Pod::Weaver::Section::Legal: '4.006'
+    Pod::Weaver::Section::Name: '4.006'
+    Pod::Weaver::Section::Region: '4.006'
+    Pod::Weaver::Section::Version: '4.006'
     Test::CPAN::Changes: '0.30'
     Test::CPAN::Meta: '0.23'
     Test::Differences: '0.62'
+    Test::Fatal: '0.013'
     Test::Kwalitee: '1.22'
     Test::More: '1.001003'
     Test::Pod: '1.48'
@@ -500,7 +524,7 @@ x_Dist_Zilla:
         Dist::Zilla::Plugin::Git::Tag:
           branch: ~
           signed: '0'
-          tag: 0.001000-source
+          tag: 0.001001-source
           tag_format: '%v-source'
           tag_message: v%v
           time_zone: local
@@ -554,7 +578,7 @@ x_Dist_Zilla:
         Dist::Zilla::Plugin::Git::Tag:
           branch: releases
           signed: '0'
-          tag: '0.001000'
+          tag: '0.001001'
           tag_format: '%v'
           tag_message: v%v
           time_zone: local

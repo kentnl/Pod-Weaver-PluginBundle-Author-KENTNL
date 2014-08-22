@@ -2,6 +2,7 @@
 .gitignore
 .perltidyrc
 .travis.yml
+.travis_early_installdeps.master
 Changes
 LICENSE
 MANIFEST
@@ -18,6 +19,10 @@ lib/Pod/Weaver/PluginBundle/Author/KENTNL/Postlude.pm
 lib/Pod/Weaver/PluginBundle/Author/KENTNL/Prelude.pm
 lib/Pod/Weaver/PluginBundle/Author/KENTNL/Role/Easy.pm
 maint/perlcritic.rc.gen.pl
+misc/Changes.deps
+misc/Changes.deps.all
+misc/Changes.deps.dev
+misc/Changes.deps.opt
 misc/perlcritic.deps
 perlcritic.rc
 t/00-compile/lib_Pod_Weaver_PluginBundle_Author_KENTNL_Collectors_pm.t

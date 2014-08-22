@@ -5,7 +5,7 @@ use utf8;
 
 package Pod::Weaver::PluginBundle::Author::KENTNL::Postlude;
 
-our $VERSION = '0.001000';
+our $VERSION = '0.001001';
 
 # ABSTRACT: End of document stuff
 
@@ -48,7 +48,7 @@ Pod::Weaver::PluginBundle::Author::KENTNL::Postlude - End of document stuff
 
 =head1 VERSION
 
-version 0.001000
+version 0.001001
 
 =head1 SYNOPSIS
 
