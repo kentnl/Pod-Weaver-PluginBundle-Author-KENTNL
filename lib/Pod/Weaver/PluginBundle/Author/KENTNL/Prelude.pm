@@ -5,7 +5,7 @@ use utf8;
 
 package Pod::Weaver::PluginBundle::Author::KENTNL::Prelude;
 
-our $VERSION = '0.001002';
+our $VERSION = '0.001003';
 
 # ABSTRACT: Introductory POD Segments
 
@@ -49,7 +49,7 @@ Pod::Weaver::PluginBundle::Author::KENTNL::Prelude - Introductory POD Segments
 
 =head1 VERSION
 
-version 0.001002
+version 0.001003
 
 =head1 SYNOPSIS
 
