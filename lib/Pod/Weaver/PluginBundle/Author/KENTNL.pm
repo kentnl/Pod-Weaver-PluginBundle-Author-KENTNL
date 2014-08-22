@@ -5,7 +5,7 @@ use utf8;
 
 package Pod::Weaver::PluginBundle::Author::KENTNL;
 
-our $VERSION = '0.001002';
+our $VERSION = '0.001003';
 
 # ABSTRACT: KENTNL's amazing Pod::Weaver Plugin Bundle.
 

@@ -5,7 +5,7 @@ use utf8;
 
 package Pod::Weaver::PluginBundle::Author::KENTNL::Role::Easy;
 
-our $VERSION = '0.001002';
+our $VERSION = '0.001003';
 
 # ABSTRACT: Moo based instance based sugar syntax for mutable configuration declaration
 
