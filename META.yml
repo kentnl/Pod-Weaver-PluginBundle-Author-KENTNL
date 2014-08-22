@@ -42,6 +42,17 @@ requires:
   Moo::Role: '0'
   MooX::Lsub: '0'
   Pod::Weaver::Config::Assembler: '0'
+  Pod::Weaver::Plugin::SingleEncoding: '0'
+  Pod::Weaver::PluginBundle::CorePrep: '0'
+  Pod::Weaver::Section::Authors: '0'
+  Pod::Weaver::Section::Collect: '0'
+  Pod::Weaver::Section::Contributors: '0'
+  Pod::Weaver::Section::Generic: '0'
+  Pod::Weaver::Section::Leftovers: '0'
+  Pod::Weaver::Section::Legal: '0'
+  Pod::Weaver::Section::Name: '0'
+  Pod::Weaver::Section::Region: '0'
+  Pod::Weaver::Section::Version: '0'
   Try::Tiny: '0'
   perl: '5.008'
   strict: '0'
@@ -57,7 +68,7 @@ x_BuiltWith:
     CPAN::Meta: '2.142060'
     Carp: '1.34'
     Dist::Zilla::App::Command::bakeini: '0.001002'
-    Dist::Zilla::Plugin::Author::KENTNL::RecommendFixes: '0.002003'
+    Dist::Zilla::Plugin::Author::KENTNL::RecommendFixes: '0.002002'
     Dist::Zilla::Plugin::Authority: '1.006'
     Dist::Zilla::Plugin::AutoPrereqs: '5.020'
     Dist::Zilla::Plugin::BumpVersionAfterRelease: '0.002'
@@ -101,15 +112,26 @@ x_BuiltWith:
     Dist::Zilla::Plugin::TestRelease: '5.020'
     Dist::Zilla::Plugin::Twitter: '0.025'
     Dist::Zilla::Plugin::UploadToCPAN: '5.020'
-    Dist::Zilla::PluginBundle::Author::KENTNL: '2.020000'
+    Dist::Zilla::PluginBundle::Author::KENTNL: '2.019000'
     ExtUtils::MakeMaker: '6.98'
-    File::Spec: '3.49'
+    File::Spec: '3.48'
     Module::Runtime: '0.014'
     Moo: '1.006000'
     Moo::Role: '1.006000'
     MooX::Lsub: '0.001003'
     Pod::Coverage::TrustPod: '0.100003'
     Pod::Weaver::Config::Assembler: '4.006'
+    Pod::Weaver::Plugin::SingleEncoding: '4.006'
+    Pod::Weaver::PluginBundle::CorePrep: '4.006'
+    Pod::Weaver::Section::Authors: '4.006'
+    Pod::Weaver::Section::Collect: '4.006'
+    Pod::Weaver::Section::Contributors: '0.008'
+    Pod::Weaver::Section::Generic: '4.006'
+    Pod::Weaver::Section::Leftovers: '4.006'
+    Pod::Weaver::Section::Legal: '4.006'
+    Pod::Weaver::Section::Name: '4.006'
+    Pod::Weaver::Section::Region: '4.006'
+    Pod::Weaver::Section::Version: '4.006'
     Test::CPAN::Changes: '0.30'
     Test::CPAN::Meta: '0.23'
     Test::Differences: '0.62'
@@ -120,25 +142,23 @@ x_BuiltWith:
     Try::Tiny: '0.22'
     strict: '1.08'
     utf8: '1.14'
-    warnings: '1.26'
+    warnings: '1.24'
   perl:
-    original: v5.21.3
+    original: v5.21.1
     qv: 1
     version:
       - 5
       - 21
-      - 3
+      - 1
   perl-config:
     gccversion: 4.8.3
-    git_commit_id: 640eedb9ffcac7a9c2793689044e84bfd9af3045
-    git_describe: v5.21.2-215-g640eedb
     myarchname: x86_64-linux
     osname: linux
   platform: linux
   uname: 'Linux 3.16.1-aufs x86_64 GenuineIntel GNU/Linux'
 x_Dist_Zilla:
   perl:
-    version: '5.021003'
+    version: '5.021001'
   plugins:
     -
       class: Dist::Zilla::Plugin::Bootstrap::lib
@@ -434,7 +454,7 @@ x_Dist_Zilla:
     -
       class: Dist::Zilla::Plugin::Author::KENTNL::RecommendFixes
       name: '@Author::KENTNL/Author::KENTNL::RecommendFixes'
-      version: '0.002003'
+      version: '0.002002'
     -
       class: Dist::Zilla::Plugin::ReadmeFromPod
       name: '@Author::KENTNL/ReadmeFromPod'
