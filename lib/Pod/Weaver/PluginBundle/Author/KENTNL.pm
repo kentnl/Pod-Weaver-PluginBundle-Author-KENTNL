@@ -73,14 +73,16 @@ version 0.001002
   [@Author::KENTNL]
 
   -~- Inherited from @Author::KENTNL::Collectors -~-
-  ; command[].default = [ required attr method pattr pmethod ]
+  ; command[].default = [ required function attr method pfunction pattr pmethod ]
   ; command[].entry_type[0] = KNOWNCOMMANDNAME
   ; command[].entry_type[1] = COMMANDNAME = DESCRIPTION
   ;        KNOWNCOMMANDNAME.enums =
   ;             = required      ; REQUIRED METHODS
+  ;             = function      ; FUNCTIONS
   ;             = method        ; METHODS
   ;             = attr          ; ATTRIBUTES
   ;             = cattr         ; ATTRIBUTES / CONSTRUCTOR ARGUMENTS
+  ;             = pfuncton      ; PRIVATE FUNCTIONS
   ;             = pmethod       ; PRIVATE METHODS
   ;             = pattr         ; PRIVATE ATTRIBUTES
 
