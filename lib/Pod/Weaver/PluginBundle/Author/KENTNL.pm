@@ -5,7 +5,7 @@ use utf8;
 
 package Pod::Weaver::PluginBundle::Author::KENTNL;
 
-our $VERSION = '0.001001';
+our $VERSION = '0.001002';
 
 # ABSTRACT: KENTNL's amazing Pod::Weaver Plugin Bundle.
 
@@ -66,21 +66,23 @@ Pod::Weaver::PluginBundle::Author::KENTNL - KENTNL's amazing Pod::Weaver Plugin 
 
 =head1 VERSION
 
-version 0.001001
+version 0.001002
 
 =head1 QUICK REFERENCE
 
   [@Author::KENTNL]
 
   -~- Inherited from @Author::KENTNL::Collectors -~-
-  ; command[].default = [ required attr method pattr pmethod ]
+  ; command[].default = [ required function attr method pfunction pattr pmethod ]
   ; command[].entry_type[0] = KNOWNCOMMANDNAME
   ; command[].entry_type[1] = COMMANDNAME = DESCRIPTION
   ;        KNOWNCOMMANDNAME.enums =
   ;             = required      ; REQUIRED METHODS
+  ;             = function      ; FUNCTIONS
   ;             = method        ; METHODS
   ;             = attr          ; ATTRIBUTES
   ;             = cattr         ; ATTRIBUTES / CONSTRUCTOR ARGUMENTS
+  ;             = pfuncton      ; PRIVATE FUNCTIONS
   ;             = pmethod       ; PRIVATE METHODS
   ;             = pattr         ; PRIVATE ATTRIBUTES
 

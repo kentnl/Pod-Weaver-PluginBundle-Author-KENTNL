@@ -5,7 +5,7 @@ use utf8;
 
 package Pod::Weaver::PluginBundle::Author::KENTNL::Collectors;
 
-our $VERSION = '0.001001';
+our $VERSION = '0.001002';
 
 # ABSTRACT: Sub/Attribute/Whatever but shorter and with defaults
 
@@ -25,12 +25,14 @@ sub mvp_multivalue_args { return qw( commands ) }
 sub bundle_prefix       { return '@A:KNL:Collectors' }
 
 my $command_aliases = {
-  'required' => 'REQUIRED METHODS',
-  'method'   => 'METHODS',
-  'attr'     => 'ATTRIBUTES',
-  'cattr'    => 'ATTRIBUTES / CONSTRUCTOR ARGUMENTS',
-  'pmethod'  => 'PRIVATE METHODS',
-  'pattr'    => 'PRIVATE ATTRIBUTES',
+  'required'  => 'REQUIRED METHODS',
+  'function'  => 'FUNCTIONS',
+  'method'    => 'METHODS',
+  'attr'      => 'ATTRIBUTES',
+  'cattr'     => 'ATTRIBUTES / CONSTRUCTOR ARGUMENTS',
+  'pfunction' => 'PRIVATE FUNCTIONS',
+  'pmethod'   => 'PRIVATE METHODS',
+  'pattr'     => 'PRIVATE ATTRIBUTES',
 };
 
 
@@ -67,8 +69,12 @@ my $command_aliases = {
 
 
 
+
+
+
+
 lsub commands => sub {
-  return [qw( required attr method pattr pmethod )];
+  return [qw( required function attr method pfunction pattr pmethod )];
 };
 
 
@@ -112,19 +118,21 @@ Pod::Weaver::PluginBundle::Author::KENTNL::Collectors - Sub/Attribute/Whatever b
 
 =head1 VERSION
 
-version 0.001001
+version 0.001002
 
 =head1 QUICK REFERENCE
 
   [@Author::KENTNL::Collectors]
-  ; command[].default = [ required attr method pattr pmethod ]
+  ; command[].default = [ required function attr method pfunction pattr pmethod ]
   ; command[].entry_type[0] = KNOWNCOMMANDNAME
   ; command[].entry_type[1] = COMMANDNAME = DESCRIPTION
   ;        KNOWNCOMMANDNAME.enums =
   ;             = required      ; REQUIRED METHODS
+  ;             = function      ; FUNCTIONS
   ;             = method        ; METHODS
   ;             = attr          ; ATTRIBUTES
   ;             = cattr         ; ATTRIBUTES / CONSTRUCTOR ARGUMENTS
+  ;             = pfuncton      ; PRIVATE FUNCTIONS
   ;             = pmethod       ; PRIVATE METHODS
   ;             = pattr         ; PRIVATE ATTRIBUTES
 
@@ -164,11 +172,15 @@ Default value:
 
 =item * C<required> : REQUIRED METHODS command = C<required>
 
+=item * C<function> : FUNCTIONS command = C<function>
+
 =item * C<attr> : ATTRIBUTES command = C<attr>
 
 =item * C<method> : METHODS command = C<method>
 
 =item * C<cattr> : ATTRIBUTES / CONSTRUCTOR ARGUMENTS command = C<cattr>
+
+=item * C<pfunction> : PRIVATE FUNCTIONS command = C<pfunction>
 
 =item * C<pmethod> : PRIVATE METHODS command = C<pmethod>
 

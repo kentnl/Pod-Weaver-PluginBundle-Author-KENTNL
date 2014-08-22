@@ -1,5 +1,9 @@
 Release history for Pod-Weaver-PluginBundle-Author-KENTNL
 
+0.001002 2014-08-22T19:55:54Z
+ [Trivial]
+ - Add function and pfunction defaults
+
 0.001001 2014-08-22T08:27:58Z
  [Bugfix]
  - Declare all dependencies directly ( short term fix )

@@ -5,7 +5,7 @@ use utf8;
 
 package Pod::Weaver::PluginBundle::Author::KENTNL::Core;
 
-our $VERSION = '0.001001';
+our $VERSION = '0.001002';
 
 # ABSTRACT: Core configuration for Pod::Weaver
 
@@ -43,7 +43,7 @@ Pod::Weaver::PluginBundle::Author::KENTNL::Core - Core configuration for Pod::We
 
 =head1 VERSION
 
-version 0.001001
+version 0.001002
 
 =head1 SYNOPSIS
 
