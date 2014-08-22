@@ -14,6 +14,3 @@ This file contains ALL changes in dependencies in both REQUIRED / OPTIONAL depen
  - Pod::Weaver::Section::Region
  - Pod::Weaver::Section::Version
 
- [Changed / develop suggests]
- - Dist::Zilla::PluginBundle::Author::KENTNL 2.020000 → 2.019000
-
