@@ -7,7 +7,7 @@ Release history for Pod-Weaver-PluginBundle-Author-KENTNL
  - Dependencies changed since 0.001002, see misc/*.deps* for details
  - configure: +1 (recommends: ↑1)
  - develop: +14 ↑4 -3 (recommends: +1, suggests: ↑2)
- - runtime: (recommends: +1)
+ - runtime: ↓1 -1 (recommends: +1)
  - test: +1 ↓1 (recommends: ↑1 ↓1)
 
 0.001002 2014-08-22T19:55:54Z
