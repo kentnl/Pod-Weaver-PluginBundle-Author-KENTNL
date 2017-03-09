@@ -22,22 +22,22 @@ name: Pod-Weaver-PluginBundle-Author-KENTNL
 provides:
   Pod::Weaver::PluginBundle::Author::KENTNL:
     file: lib/Pod/Weaver/PluginBundle/Author/KENTNL.pm
-    version: '0.001003'
+    version: '0.001004'
   Pod::Weaver::PluginBundle::Author::KENTNL::Collectors:
     file: lib/Pod/Weaver/PluginBundle/Author/KENTNL/Collectors.pm
-    version: '0.001003'
+    version: '0.001004'
   Pod::Weaver::PluginBundle::Author::KENTNL::Core:
     file: lib/Pod/Weaver/PluginBundle/Author/KENTNL/Core.pm
-    version: '0.001003'
+    version: '0.001004'
   Pod::Weaver::PluginBundle::Author::KENTNL::Postlude:
     file: lib/Pod/Weaver/PluginBundle/Author/KENTNL/Postlude.pm
-    version: '0.001003'
+    version: '0.001004'
   Pod::Weaver::PluginBundle::Author::KENTNL::Prelude:
     file: lib/Pod/Weaver/PluginBundle/Author/KENTNL/Prelude.pm
-    version: '0.001003'
+    version: '0.001004'
   Pod::Weaver::PluginBundle::Author::KENTNL::Role::Easy:
     file: lib/Pod/Weaver/PluginBundle/Author/KENTNL/Role/Easy.pm
-    version: '0.001003'
+    version: '0.001004'
 recommends:
   Moo: '1.000008'
 requires:
@@ -66,4 +66,4 @@ resources:
   bugtracker: https://github.com/kentnl/Pod-Weaver-PluginBundle-Author-KENTNL/issues
   homepage: https://github.com/kentnl/Pod-Weaver-PluginBundle-Author-KENTNL
   repository: https://github.com/kentnl/Pod-Weaver-PluginBundle-Author-KENTNL.git
-version: '0.001003'
+version: '0.001004'

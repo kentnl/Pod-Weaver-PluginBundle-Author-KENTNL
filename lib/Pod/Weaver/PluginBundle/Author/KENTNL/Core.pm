@@ -4,7 +4,7 @@ use warnings;
 
 package Pod::Weaver::PluginBundle::Author::KENTNL::Core;
 
-our $VERSION = '0.001003';
+our $VERSION = '0.001004';
 
 # ABSTRACT: Core configuration for Pod::Weaver
 
@@ -42,7 +42,7 @@ Pod::Weaver::PluginBundle::Author::KENTNL::Core - Core configuration for Pod::We
 
 =head1 VERSION
 
-version 0.001003
+version 0.001004
 
 =head1 SYNOPSIS
 

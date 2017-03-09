@@ -4,7 +4,7 @@ use warnings;
 
 package Pod::Weaver::PluginBundle::Author::KENTNL::Prelude;
 
-our $VERSION = '0.001003';
+our $VERSION = '0.001004';
 
 # ABSTRACT: Introductory POD Segments
 
@@ -48,7 +48,7 @@ Pod::Weaver::PluginBundle::Author::KENTNL::Prelude - Introductory POD Segments
 
 =head1 VERSION
 
-version 0.001003
+version 0.001004
 
 =head1 SYNOPSIS
 

@@ -4,7 +4,7 @@ use warnings;
 
 package Pod::Weaver::PluginBundle::Author::KENTNL::Collectors;
 
-our $VERSION = '0.001003';
+our $VERSION = '0.001004';
 
 # ABSTRACT: Sub/Attribute/Whatever but shorter and with defaults
 
@@ -117,7 +117,7 @@ Pod::Weaver::PluginBundle::Author::KENTNL::Collectors - Sub/Attribute/Whatever b
 
 =head1 VERSION
 
-version 0.001003
+version 0.001004
 
 =head1 QUICK REFERENCE
 
