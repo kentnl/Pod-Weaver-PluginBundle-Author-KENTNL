@@ -1,11 +1,10 @@
-use 5.008;    # utf8
+use 5.006;    #our
 use strict;
 use warnings;
-use utf8;
 
 package Pod::Weaver::PluginBundle::Author::KENTNL::Collectors;
 
-our $VERSION = '0.001002';
+our $VERSION = '0.001003';
 
 # ABSTRACT: Sub/Attribute/Whatever but shorter and with defaults
 
@@ -118,7 +117,7 @@ Pod::Weaver::PluginBundle::Author::KENTNL::Collectors - Sub/Attribute/Whatever b
 
 =head1 VERSION
 
-version 0.001002
+version 0.001003
 
 =head1 QUICK REFERENCE
 
@@ -196,11 +195,11 @@ Default value:
 
 =head1 AUTHOR
 
-Kent Fredric <kentfredric@gmail.com>
+Kent Fredric <kentnl@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2014 by Kent Fredric <kentfredric@gmail.com>.
+This software is copyright (c) 2017 by Kent Fredric <kentfredric@gmail.com>.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
