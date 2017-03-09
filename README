@@ -1,59 +1,28 @@
-NAME
-    Pod::Weaver::PluginBundle::Author::KENTNL - KENTNL's amazing Pod::Weaver
-    Plugin Bundle.
+Pod::Weaver::PluginBundle::Author::KENTNL
 
-VERSION
-    version 0.001003
 
-QUICK REFERENCE
-      [@Author::KENTNL]
 
-      -~- Inherited from @Author::KENTNL::Collectors -~-
-      ; command[].default = [ required function attr method pfunction pattr pmethod ]
-      ; command[].entry_type[0] = KNOWNCOMMANDNAME
-      ; command[].entry_type[1] = COMMANDNAME = DESCRIPTION
-      ;        KNOWNCOMMANDNAME.enums =
-      ;             = required      ; REQUIRED METHODS
-      ;             = function      ; FUNCTIONS
-      ;             = method        ; METHODS
-      ;             = attr          ; ATTRIBUTES
-      ;             = cattr         ; ATTRIBUTES / CONSTRUCTOR ARGUMENTS
-      ;             = pfuncton      ; PRIVATE FUNCTIONS
-      ;             = pmethod       ; PRIVATE METHODS
-      ;             = pattr         ; PRIVATE ATTRIBUTES
+INSTALLATION
 
-SYNOPSIS
-      [@Author::KENTNL]
+This is a Perl module distribution. It should be installed with whichever
+tool you use to manage your installation of Perl, e.g. any of
 
-    This is basically the same as
+  cpanm .
+  cpan  .
+  cpanp -i .
 
-      [@Author::KENTNL::Core]
+Consult http://www.cpan.org/modules/INSTALL.html for further instruction.
+Should you wish to install this module manually, the procedure is
 
-      [@Author::KENTNL::Prelude]
-
-      [@Author::KENTNL::Collectors]
-
-      [@Author::KENTNL::Postlude]
-
-    *   "[@Author::KENTNL::Core]" :
-        "Pod::Weaver::PluginBundle::Author::KENTNL::Core"
-
-    *   "[@Author::KENTNL::Prelude]" :
-        "Pod::Weaver::PluginBundle::Author::KENTNL::Prelude"
-
-    *   "[@Author::KENTNL::Collectors]" :
-        "Pod::Weaver::PluginBundle::Author::KENTNL::Collectors"
-
-    *   "[@Author::KENTNL::Postlude]" :
-        "Pod::Weaver::PluginBundle::Author::KENTNL::Postlude"
-
-AUTHOR
-    Kent Fredric <kentfredric@gmail.com>
+  perl Makefile.PL
+  make
+  make test
+  make install
 
 COPYRIGHT AND LICENSE
-    This software is copyright (c) 2014 by Kent Fredric
-    <kentfredric@gmail.com>.
 
-    This is free software; you can redistribute it and/or modify it under
-    the same terms as the Perl 5 programming language system itself.
+This software is copyright (c) 2017 by Kent Fredric
+<kentfredric@gmail.com>.
 
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
