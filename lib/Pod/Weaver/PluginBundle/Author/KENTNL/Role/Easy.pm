@@ -4,7 +4,7 @@ use warnings;
 
 package Pod::Weaver::PluginBundle::Author::KENTNL::Role::Easy;
 
-our $VERSION = '0.001003';
+our $VERSION = '0.001004';
 
 # ABSTRACT: Moo based instance based sugar syntax for mutable configuration declaration
 

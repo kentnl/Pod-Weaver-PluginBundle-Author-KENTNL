@@ -4,7 +4,7 @@ use warnings;
 
 package Pod::Weaver::PluginBundle::Author::KENTNL;
 
-our $VERSION = '0.001003';
+our $VERSION = '0.001004';
 
 # ABSTRACT: KENTNL's amazing Pod::Weaver Plugin Bundle.
 

@@ -1,6 +1,8 @@
 Release history for Pod-Weaver-PluginBundle-Author-KENTNL
 
 {{$NEXT}}
+
+0.001003 2017-03-09T11:16:59Z 3a2d47e
  - Bugfix: Avoid test failures with -Ddefault_inc_excludes_dot
 
  [Dependencies::Stats]
