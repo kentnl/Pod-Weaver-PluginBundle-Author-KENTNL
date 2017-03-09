@@ -20,7 +20,7 @@
          },
          "requires" : {
             "ExtUtils::MakeMaker" : "0",
-            "perl" : "5.008"
+            "perl" : "5.006"
          }
       },
       "develop" : {
@@ -118,9 +118,8 @@
             "Pod::Weaver::Section::Region" : "0",
             "Pod::Weaver::Section::Version" : "0",
             "Try::Tiny" : "0",
-            "perl" : "5.008",
+            "perl" : "5.006",
             "strict" : "0",
-            "utf8" : "0",
             "warnings" : "0"
          }
       },
@@ -136,7 +135,7 @@
             "Test::Differences" : "0",
             "Test::Fatal" : "0",
             "Test::More" : "0",
-            "perl" : "5.008"
+            "perl" : "5.006"
          }
       }
    },
